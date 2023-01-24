@@ -2,11 +2,9 @@
 #include <windows.h>
 #include <conio.h>
 #include <string>
-#include "test.h"
+#include "SceneManager.h"
 
 using namespace std;
-
-
 
 
 int main()
