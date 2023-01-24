@@ -1,22 +1,27 @@
 #include "Enemy.h"
 
-using namespace std;
-
-
-int Enemy::num_enemies = 0;
 
 int main() {
-	Enemy* e1 = new Enemy;
-	Enemy* e2 = new Enemy;
-	Enemy* e3 = new Enemy;
-
-	std::cout << "Enemy: " << Enemy::num_enemies << std::endl;
-
-	delete e1;
-	delete e2;
-	delete e3;
-
-	std::cout << "Enemy: " << Enemy::num_enemies << std::endl;
+	Enemy* enemy = new Enemy();
+	enemy->Update();
 
 	return 0;
 }
+
+//class Enemy {
+//public:
+//	void (Enemy::* state_)();
+//	void approach() { std::cout << "approach" << std::endl; }
+//	void shoot() { std::cout << "shoot" << std::endl; }
+//	void leave() { std::cout << "leave" << std::endl; }
+//};
+//
+//int main() {
+//	Enemy e;
+//	e.state_ = &Enemy::approach;
+//	(e.*e.state_)();
+//	e.state_ = &Enemy::shoot;
+//	(e.*e.state_)();
+//	e.state_ = &Enemy::leave;
+//	(e.*e.state_)();
+//}

@@ -5,10 +5,25 @@
 #include <stdio.h>
 #include <string>
 
+using namespace std;
+
+
 class Enemy {
-protected:
 public:
-	static int num_enemies;
-	Enemy() {num_enemies++;	}
-	~Enemy() {num_enemies--;}
+	enum class State {
+		kApproach,
+		kAttack,
+		kRetreat,
+	};
+	static void (Enemy::* state_table[])();
+
+	State state;
+
+	void Update();
+
+	void Approach();
+
+	void Attack();
+
+	void Retreat();
 };
