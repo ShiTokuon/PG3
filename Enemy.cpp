@@ -13,14 +13,14 @@ void Enemy::Update() {
 }
 
 void Enemy::Approach() {
-	printf("Ú‹ß");
+	printf("Ú‹ß\n");
 
 }
 
 void Enemy::Attack() {
-	printf("ËŒ‚");
+	printf("ËŒ‚\n");
 }
 
 void Enemy::Retreat() {
-	printf("—£’E");
+	printf("—£’E\n");
 }
