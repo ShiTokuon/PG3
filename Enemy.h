@@ -9,6 +9,17 @@ class Enemy {
 protected:
 public:
 	static int num_enemies;
-	Enemy() {num_enemies++;	}
-	~Enemy() {num_enemies--;}
+	Enemy();
+	~Enemy();
+
+	bool IsAlive();
+
+	void Draw();
+	void Update();
+	void SetDeath();
+
+public:
+	static bool isAllAlive;
+private:
+	bool isAlive;
 };

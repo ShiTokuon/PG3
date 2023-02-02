@@ -6,17 +6,32 @@ using namespace std;
 int Enemy::num_enemies = 0;
 
 int main() {
-	Enemy* e1 = new Enemy;
-	Enemy* e2 = new Enemy;
-	Enemy* e3 = new Enemy;
+	Enemy e1;
+	Enemy e2;
+	Enemy e3;
 
-	std::cout << "Enemy: " << Enemy::num_enemies << std::endl;
+	e1.Draw();
+	e2.Draw();
+	e3.Draw();
+	printf("---\n");
 
-	delete e1;
-	delete e2;
-	delete e3;
+	e2.SetDeath();
+	printf("“G‚ğˆê‘Ì“|‚µ‚½\n");
 
-	std::cout << "Enemy: " << Enemy::num_enemies << std::endl;
+	e1.Draw();
+	e2.Draw();
+	e3.Draw();
+	printf("---\n");
+
+	e1.Update();
+	e2.Update();
+	e3.Update();
+	printf("---\n");
+
+	e1.Draw();
+	e2.Draw();
+	e3.Draw();
+	printf("---\n");
 
 	return 0;
 }
