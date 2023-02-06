@@ -1,28 +1,31 @@
-#include "Enemy.h"
+#include "Circle.h"
+#include "Rectangle.h"
 
 
-int main() {
-	Enemy* enemy = new Enemy();
-	enemy->Update();
+int main() 
+{
+	//Circle circle;
 
-	delete enemy;
+	//circle.size();
+	//circle.draw();
+
+	IShape* shape[5]{};
+
+	shape[0] = new Circle();
+	shape[1] = new Circle();
+	shape[2] = new Rectangle();
+	shape[3] = new Circle();
+	shape[4] = new Rectangle();
+
+	for (int i = 0; i < 5; i++) {
+		shape[i]->size();
+		shape[i]->draw();
+	}
+
+	for (auto p : shape) {
+		delete p;
+	}
+
 	return 0;
 }
 
-//class Enemy {
-//public:
-//	void (Enemy::* state_)();
-//	void approach() { std::cout << "approach" << std::endl; }
-//	void shoot() { std::cout << "shoot" << std::endl; }
-//	void leave() { std::cout << "leave" << std::endl; }
-//};
-//
-//int main() {
-//	Enemy e;
-//	e.state_ = &Enemy::approach;
-//	(e.*e.state_)();
-//	e.state_ = &Enemy::shoot;
-//	(e.*e.state_)();
-//	e.state_ = &Enemy::leave;
-//	(e.*e.state_)();
-//}
